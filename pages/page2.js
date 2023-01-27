@@ -68,10 +68,10 @@ export default function Example() {
                                 <p className="mt-1 text-xs text-gray-600">※住民税の控除金額は所得税の控除金額と同額とする</p>
                             </div>
                         </div>
-                        <div className="mt-5 md:col-span-2 md:mt-0">
+                        <div className="mt-5 md:col-span-2 md:mt-0 ">
                             <form action="#" method="POST">
                                 <div className="shadow sm:overflow-hidden sm:rounded-md">
-                                    <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
+                                    <div className="space-y-6 bg-white px-4 py-5 sm:p-6 overflow-y-scroll h-96">
                                         <div className="col-span-6 sm:col-span-3">
                                             <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                 所得の計算方法
@@ -101,7 +101,7 @@ export default function Example() {
                                             >
                                                 {services.map((item) => {
                                                     return (
-                                                        <option value={item.title}>{item.title}</option>
+                                                        <option key={item.title} value={item.title}>{item.title}</option>
                                                     )
                                                 })}
                                             </select>
@@ -119,7 +119,7 @@ export default function Example() {
                                                 {subServices.map((item) => {
                                                     console.log(item)
                                                     return (
-                                                        <option value={item.name}>{item.name}</option>
+                                                        <option key={item.name} value={item.name}>{item.name}</option>
                                                     )
                                                 })}
                                             </select>
@@ -137,7 +137,7 @@ export default function Example() {
                                                 {subServices.map((item) => {
                                                     console.log(item)
                                                     return (
-                                                        <option value={item.name}>{item.name}</option>
+                                                        <option key={item.name} value={item.name}>{item.name}</option>
                                                     )
                                                 })}
                                             </select>
@@ -171,6 +171,92 @@ export default function Example() {
                                         <div className="col-span-6 sm:col-span-3">
                                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                                                 役員報酬可能上限
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                年商（売上高）
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+
+                                        <p className='text-lg'>2. 費用手入力</p>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                売上原価(外注費)
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                業務委託費
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                交際費
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                広告宣伝費
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                地代家賃
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="first-name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
+                                        <div className="col-span-6 sm:col-span-3">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                水道光熱費
                                             </label>
                                             <input
                                                 type="text"
