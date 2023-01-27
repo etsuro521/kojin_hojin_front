@@ -101,7 +101,7 @@ export default function Example() {
                       >
                         {services.map((item)=>{
                           return(
-                            <option value={item.title}>{item.title}</option>
+                            <option key={item.title} value={item.title}>{item.title}</option>
                           )
                         })}
                       </select>
@@ -119,7 +119,7 @@ export default function Example() {
                         {subServices.map((item) => {
                           console.log(item)
                           return (
-                            <option value={item.name}>{item.name}</option>
+                            <option key={item.name} value={item.name}>{item.name}</option>
                           )
                         })}
                       </select>
@@ -137,7 +137,7 @@ export default function Example() {
                         {subServices.map((item) => {
                           console.log(item)
                           return (
-                            <option value={item.name}>{item.name}</option>
+                            <option key={item.name} value={item.name}>{item.name}</option>
                           )
                         })}
                       </select>
